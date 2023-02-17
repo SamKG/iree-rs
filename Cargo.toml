@@ -1,0 +1,23 @@
+[package]
+name = "iree-rs"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+iree-sys = { path = "iree-sys", version = "0.1.0" }
+
+[dev-dependencies]
+serde = { version = "1.0.152", features = ["derive"] }
+serde_json = "1.0.93"
+once_cell = "1.17.0"
+
+[workspace]
+members = ["iree-sys"]
+
+
+[[example]]
+name = "resnet18"
+test = true
+bench = true
